@@ -4,7 +4,7 @@ const connectDB = require("./config/db");
 
 const userRoutes = require("./routes/userRoutes");
 const recordRoutes = require("./routes/recordRoutes");
-const dashboardRoutes = require("./routes/dashboardRoutes"); // ✅ added
+const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/records", recordRoutes);
-app.use("/api/dashboard", dashboardRoutes); // ✅ added
+app.use("/api/dashboard", dashboardRoutes);
 
 app.get("/", (req, res) => {
   res.send("Server is running 🚀");
